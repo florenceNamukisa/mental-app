@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8; /* Soft light background */
+  color: #333; /* Dark text for readability */
+  display: flex;
+  flex-direction: column; /* Align header and form vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 10px; /* Reduced margin to bring closer to the form */
+}
+
+header h1 {
+  font-size: 3rem; /* Larger heading size */
+  color: #2c3e50; /* Deep blue-gray for header text */
+  margin: 0;
+}
+
+/* Form Styles */
+.mood-form {
+  background: #ffffff; /* White background for contrast */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  padding: 30px 40px; /* Increased padding for a spacious layout */
+  max-width: 500px; /* Larger form width */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px; /* Increased margin between form elements */
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.1rem; /* Slightly larger font for labels */
+  color: #34495e; /* Slightly darker gray for labels */
+  display: block;
+  margin-bottom: 8px; /* More spacing under labels */
+}
+
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem; /* Larger font size for inputs */
+  border: 1px solid #d1d8e0; /* Soft border */
+  border-radius: 8px; /* More rounded corners */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #3498db; /* Highlight border on focus */
+  outline: none;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.5); /* Soft glow on focus */
+}
+
+textarea {
+  resize: none;
+  min-height: 120px; /* Slightly larger textarea */
+}
+
+button {
+  background-color: #3498db; /* Bright blue button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 8px; /* More rounded corners */
+  padding: 12px 25px; /* Slightly larger button */
+  font-size: 1.1rem; /* Larger font size for buttons */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  box-shadow: 0 6px 12px rgba(41, 128, 185, 0.5); /* Add shadow on hover */
+}
+
+button:active {
+  background-color: #21618c; /* Even darker blue on click */
+  box-shadow: none; /* Remove shadow on click */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .mood-form {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+}

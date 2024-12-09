@@ -1,0 +1,48 @@
+//- doctype html
+//- html
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Login Form
+//-     link(rel="stylesheet" href="/styles/login.css")
+//-   body
+//-     .login-container
+//-       .profile-picture
+//-         img(src="#" alt="User Profile Picture")
+//-       form.login-form
+//-         div.input-group
+//-           label(for="email")
+//-             i.icon-envelope
+//-           input#email(type="email" placeholder="Email" required)
+//-         div.input-group
+//-           label(for="password")
+//-             i.icon-lock
+//-           input#password(type="password" placeholder="Password" required)
+//-         div.options
+//-           label
+//-             input(type="checkbox")
+//-             | Remember me
+//-           a(href="#") Forgot Password?
+//-         button(type="submit") LOGIN
+//-       p.footer-text
+//-         | don't have an account yet? 
+//-         a(href="#") sign up now
+
+doctype html
+head
+  title Pug
+  link(rel="stylesheet" href="/styles/login.css")
+  script(type='text/javascript').
+    if (foo) bar(1 + 5)
+
+.login-container
+  .profile-image
+  form.login-form
+    input(type='email' placeholder='Email')
+    input(type='password' placeholder='Password')
+    .remember-me
+      input#remember-me(type='checkbox')
+      label(for='remember-me') Remember me
+    a.forgot-password(href='#') Forgot Password?
+    button.login-button(type='submit') LOGIN
+  p.signup-cta don&apos;t have an account yet? sign up now

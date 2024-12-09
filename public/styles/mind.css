@@ -1,0 +1,186 @@
+/* -----------------------------------------
+   General Styles
+----------------------------------------- */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    color: #003366;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+  
+  /* -----------------------------------------
+     Layout Styles
+  ----------------------------------------- */
+  
+  .mood-selection,
+  .video-player,
+  .meditation-timer,
+  .quotes-section,
+  .mood-instructions {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .mood-selection button,
+  .mood-selection button:hover {
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .mood-selection button:hover {
+    background-color: #005f73;
+  }
+  
+  .video-player video {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  /* -----------------------------------------
+     Timer Styles
+  ----------------------------------------- */
+  
+  .meditation-timer .timer-display p {
+    font-size: 2rem;
+    color: #00796b;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0f7fa;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+  
+  .progress-bar div {
+    height: 100%;
+    background-color: #00796b;
+    width: 0%;
+  }
+  
+  /* -----------------------------------------
+     Button and Interactivity Styles
+  ----------------------------------------- */
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* -----------------------------------------
+     Quotes and Instructions Section Styles
+  ----------------------------------------- */
+  
+  .quotes-section p {
+    font-size: 1.5rem;
+    color: #004d40;
+  }
+  
+  .mood-instructions {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  /* -----------------------------------------
+     Footer Styles
+  ----------------------------------------- */
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004e6e;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  footer a {
+    color: #80deea;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* -----------------------------------------
+     Media Queries for Responsiveness
+  ----------------------------------------- */
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .video-player video {
+      height: 300px;
+    }
+  
+    .mood-selection button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    .timer-display p {
+      font-size: 1.5rem;
+    }
+  
+    .quotes-section p {
+      font-size: 1.3rem;
+    }
+  }
+  

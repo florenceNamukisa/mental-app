@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Mood Tracker - Mood 
+    link(rel="stylesheet" href="/styles/mood.css")
+  body
+    header
+      h1 Mood History
+    main
+      ul
+        each mood in moods
+          li
+            p Date: #{mood.date.toDateString()}
+            p Mood: #{mood.mood}
+            if mood.notes
+              p Notes: #{mood.notes}

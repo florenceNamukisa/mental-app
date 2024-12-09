@@ -1,0 +1,84 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Flo Mindrise - About Us
+  link(rel='stylesheet' href='styles/about.css')
+header
+  nav
+    ul
+      li
+        a(href='/') Home
+      li
+        a(href='/about') About Us
+      li
+        a(href='/contact') Contact
+main
+  section.about-header
+    h1 About Flo Mindrise
+    p
+      | Flo Mindrise is a mental wellness platform designed to help individuals cultivate positive thinking, improve emotional resilience, and empower youth to believe in their potential.
+  section.cards-container
+    // Mission Card
+    .card
+      .card-image
+        img(src='https://www.malvernbh.com/wp-content/uploads/2022/01/shutterstock_1449672365-min-1-scaled.jpg' alt='Mission Image')
+      .card-content
+        h2 Mission
+        p
+          | Our mission is to empower individuals to achieve mental wellness through practical tools, personalized support, and a positive community. We strive to help everyone tap into their full potential, embrace growth, and foster a mindset that thrives.
+    // Vision Card
+    .card.reverse
+      .card-image.circular-frame
+        img(src='https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg' alt='Vision Image')
+      .card-content
+        h2 Vision Statement
+        p
+          | We envision a world where every young person has the mental tools and confidence to succeed and overcome life&rsquo;s challenges.
+    // Core Values Card
+    .card
+      .card-image
+        img(src='https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg' alt='Core Values Image')
+      .card-content
+        h2 Core Values
+        ul
+          li
+            strong Empathy
+            |  - Understanding the unique needs of each individual.
+          li
+            strong Inspiration
+            |  - Providing motivational content and success stories.
+          li
+            strong Growth
+            |  - Empowering youth to develop positive mindsets and resilience.
+          li
+            strong Community
+            |  - Building a supportive environment for users to connect.
+    // Problem Card
+    .card.reverse
+      .card-image.circular-frame
+        img(src='https://images.pexels.com/photos/3184396/pexels-photo-3184396.jpeg' alt='Problem Image')
+      .card-content
+        h2 The Problem We Are Solving
+        p
+          | In a world where mental health is often overlooked, especially among youth, Flo Mindrise provides a safe space and tools to navigate challenges, reduce stress, and foster a positive mindset.
+    // Approach Card
+    .card
+      .card-image
+        img(src='https://images.pexels.com/photos/3182820/pexels-photo-3182820.jpeg' alt='Approach Image')
+      .card-content
+        h2 Our Approach
+        p
+          | Through daily affirmations, guided meditations, success stories, and expert advice, Flo Mindrise guides individuals on their journey towards mental wellness.
+  section.cta
+    h2 Join the Movement
+    p
+      | Join us on the journey to a brighter future. Start your mental wellness journey today with Flo Mindrise.
+    a.cta-button(href='/addUser') Sign Up Now
+footer
+  p &copy; 2024 Flo Mindrise. All rights reserved.
+  ul
+    li
+      a(href='/terms') Terms of Service
+    li
+      a(href='/privacy') Privacy Policy

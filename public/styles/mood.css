@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7; /* Light soft background */
+    color: #333; /* Dark text for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    margin-bottom: 30px; /* Spacing between header and content */
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    color: #2c3e50; /* Deep blue-gray */
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+  }
+  
+  /* Main Content Styles */
+  main {
+    width: 100%;
+    max-width: 800px; /* Limit width for better readability */
+  }
+  
+  /* Mood List Styles */
+  ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background: #ffffff; /* White background for contrast */
+    border: 2px solid #d1d8e0; /* Subtle border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px; /* Space between list items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for each mood card */
+  li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  }
+  
+  /* Text inside mood cards */
+  li p {
+    margin: 0 0 10px 0; /* Spacing between paragraphs */
+    font-size: 1.1rem;
+    color: #34495e; /* Darker gray for text */
+  }
+  
+  li p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for last paragraph */
+  }
+  
+  li p span {
+    font-weight: bold;
+    color: #2c3e50; /* Deep blue-gray for emphasized text */
+  }
+  
+  /* Notes text styling */
+  li p:nth-child(3) {
+    font-style: italic;
+    color: #7f8c8d; /* Softer gray for optional notes */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+  
+    li {
+      padding: 15px;
+    }
+  
+    li p {
+      font-size: 1rem;
+    }
+  }
+  

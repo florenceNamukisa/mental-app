@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(to bottom, #eef2f3, #d9e2ec); */
+    color: #2c3e50;
+  }
+  
+  /* Header */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .get-started {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh; /* Reduced height to half */
+  color: rgb(64, 6, 253);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: slide-images 12s infinite;
+  z-index: 1;
+}
+
+.hero-stationary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://static6.depositphotos.com/1001545/599/i/450/depositphotos_5990281-stock-photo-young-woman-in-the-field.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+@keyframes slide-images {
+  0% {
+    background-image: url('https://sleep.brightspotcdn.com/dims4/default/443bfd8/2147483647/strip/true/crop/1200x675+0+58/resize/1200x675!/quality/90/?url=http%3A%2F%2Fmattress-firm-brightspot.s3.amazonaws.com%2F10%2F62%2F64fdb5c4490682c29d6f267631fe%2Fmeditation-apps.png');
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  35% {
+    background-image: url('https://static.wixstatic.com/media/11062b_5f77bdd17a964ca2989e4fc291fe09d7~mv2.jpg/v1/fill/w_980,h_370,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_5f77bdd17a964ca2989e4fc291fe09d7~mv2.jpg');
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKCVhQXhTtywmhnT4Nsa9Yk0VYG8gfpCIk_EqLRs3WaoEhhcma8-suPgCk4vj_F-h8SLE&usqp=CAU');
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0; /* Ensure this ends to loop back */
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Above animations and stationary image */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem; /* Adjusted for reduced height */
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: black; /* Adjusted for reduced height */
+  margin-bottom: 15px;
+}
+
+.cta {
+  background-color:  #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+  /* Features Section */
+  .features {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  /* Ensure the images in feature cards are slightly larger */
+ .feature-card img {
+    width: 100%; /* Increase width by 20% */
+    height: auto; /* Keep aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+  }
+  
+  .feature-card img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+   
+  
+  /* Community Section */
+  .community {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  /* .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    text-size-adjust: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } */
+  .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    width: 280px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial img {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .testimonial p:first-of-type {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Resources section */
+  .resources {
+    padding: 60px 20px;
+  }
+  /* Footer */
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  

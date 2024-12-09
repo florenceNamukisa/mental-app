@@ -1,0 +1,113 @@
+doctype html
+html(lang="en")
+  head
+    title Flo Mindrise - Mindfulness Meditation
+    link(rel="stylesheet", href="/styles/mind.css") // Link your CSS file here
+    // Link your JavaScript file here
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  body
+    header
+      h1 Flo Mindrise
+      nav
+        ul
+          li: a(href="/") Home
+          li: a(href="/mindfulness") Mindfulness Meditation
+          li: a(href="/about") About
+          li: a(href="/contact") Contact Us
+
+    main
+      // Guided Meditations
+      section#guided-meditations
+        h2 Guided Meditations
+        p Select from various meditation sessions tailored to your needs.
+        ul
+          each session in ["Stress Relief", "Focus Booster", "Gratitude Practice", "Deep Sleep"]
+            li: button(type="button" onclick=`playSession('${session}')`) #{session}
+
+      // Breathing Exercises
+      section#breathing-exercises
+        h2 Breathing Exercises
+        p Follow visual or audio guides for effective breathing techniques.
+        div#breathing-container
+          button(type="button" id="start-breathing") Start 4-7-8 Breathing
+          div#breathing-animation // Animated breathing visualization
+
+      // Mindfulness Challenges
+      section#challenges
+        h2 Mindfulness Challenges
+        p Take on challenges to strengthen your mindfulness habit.
+        ul
+          li
+            a(href="/challenge/7-day-gratitude") 7-Day Gratitude Challenge
+          li
+            a(href="/challenge/14-day-focus") 14-Day Focus Challenge
+          li
+            a(href="/challenge/sleep") Monthly Sleep Improvement Plan
+
+      // Calming Sounds and Music
+      section#calming-sounds
+        h2 Calming Sounds and Music
+        p Customize your ambiance with relaxing sounds.
+        div#sound-mixer
+          label(for="nature-sounds") Nature Sounds
+          input(type="range" id="nature-sounds" min="0" max="100")
+          label(for="meditation-music") Meditation Music
+          input(type="range" id="meditation-music" min="0" max="100")
+
+      // Body Scans
+      section#body-scan
+        h2 Body Scans
+        p Choose a guided body scan session.
+        ul
+          each scan in ["Quick 5-Minute", "15-Minute Relaxation", "30-Minute Awareness"]
+            li: button(type="button" onclick=`startBodyScan('${scan}')`) #{scan}
+
+      // Mindful Journaling
+      section#journaling
+        h2 Mindful Journaling
+        p Reflect and record your thoughts after meditations.
+        form(action="/journaling" method="POST")
+          label(for="reflection") Reflection
+          textarea(name="reflection" id="reflection" rows="5" placeholder="Write here...")
+          button(type="submit") Save Reflection
+
+      // Interactive Tools
+      section#tools
+        h2 Interactive Tools
+        ul
+          li: a(href="/tools/timer") Meditation Timer
+          li: a(href="/tools/mood-tracker") Mood Tracker
+          li: a(href="/tools/visualization") Visualization Exercises
+          li: a(href="/tools/mindfulness-games") Mindfulness Games
+
+      // User Engagement
+      section#engagement
+        h2 User Engagement
+        ul
+          li: a(href="/quotes") Daily Inspirational Quotes
+          li: a(href="/community") Community Forums
+          li: a(href="/group-meditations") Group Meditations
+          li: a(href="/progress") Share Your Progress
+
+      // Advanced Options
+      section#advanced-options
+        h2 Advanced Options
+        ul
+          li: a(href="/personalized-plan") Personalized Meditation Plans
+          li: a(href="/offline") Offline Access
+          li: a(href="/wearables") Wearable Integration
+
+      // Additional Content
+      section#content
+        h2 Additional Content
+        ul
+          li: a(href="/mindfulness-101") Mindfulness 101 (Articles and Videos)
+          li: a(href="/themed-sessions") Themed Sessions (Eating, Walking, Listening)
+          li: a(href="/kids-teens") Kids and Teens Section
+
+    footer
+      p &copy; 2024 Flo Mindrise. All Rights Reserved.
+
+    script(src="/scripts/mind.js")

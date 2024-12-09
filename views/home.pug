@@ -1,0 +1,72 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Mental Wellness - Home
+    link(rel="stylesheet" href="/styles/index.css")
+  body
+    header
+      nav.navbar
+        div.logo Flo MindRise
+        ul.nav-links
+          li: a(href="#features") Features
+          li: a(href="#community") Community
+          li: a(href="#resources") Resources
+          li: a(href="#contact") Contact Us
+          li: a(href="/login") Login
+          a.get-started(href="/addUser")  Get Started
+    main
+      section.hero
+        div.hero-stationary
+        div.hero-content
+          h1  Welcome To Flo MindRise 😊
+          p Your Path to a Healthier Mind and Happier Life
+          a.cta(href="/about") Learn 
+      section#features.features
+        h2 Features
+        div.feature-list
+          div.feature-card
+            a(href="/mood") 
+              img(src="/images/image.png", alt="Mood Tracker")
+              h3 Mood Tracker
+              p Track your daily moods and identify patterns.
+          div.feature-card
+            a(href="/meditation")
+              img(src="images/med.png", alt="Guided Meditation")
+              h3 Guided Meditations
+              p Relax with our curated meditation sessions.
+          div.feature-card
+            a(href="/journaling")
+              img(src="images/journ.png", alt="Journaling Tool")
+              h3 Journaling
+              p Reflect on your day with easy-to-use prompts.
+      section#community.community
+        h2 Join Our Community
+        p Connect with others on their wellness journey.
+        div.testimonials
+          div.testimonial
+            img(src="images/Pretty.png", alt="Sarah", width="50%")
+            p "This app changed my life for the better!" - Sarah
+            p Before I started using the Flo MindRise application, I struggled with managing stress and often found myself overwhelmed by negative thoughts and emotions. I lacked the tools to navigate my feelings, which affected my overall well-being and sleep. But since I started using the app, I’ve experienced a significant shift. It helped me understand my emotions better, manage stress through guided meditation and breathing exercises, and cultivate a more positive mindset. The mindfulness tools and empowering resources have made a huge difference in my daily life, bringing a sense of calm and balance I didn’t have before. I feel more resilient and focused now, and I encourage others to try Flo MindRise. Whether you're facing stress, anxiety, or just want to improve your mental wellness, this app offers powerful tools that can truly help you.
+          div.testimonial
+            img(src="images/john.png", alt="Kerry", width="50%")
+            p "The guided meditations are a lifesaver!" - Kerry 
+            p Before using Flo MindRise, I often felt anxious and struggled with staying focused. My thoughts would race, and I had difficulty managing stress, especially during hectic days. Since I started using the app, things have changed. The guided meditations and positive affirmations helped me slow down and regain control over my emotions. I’ve learned how to manage my stress more effectively, and I feel calmer and more balanced. Flo MindRise has become a daily tool for me, and I highly recommend it to anyone who wants to improve their mental well-being. It’s a simple but powerful way to bring peace and positivity into your life.
+          div.testimonial
+            img(src="images/Praise.png", alt="Praise", width="60%")
+            p "Finding Balance and Peace with Flo MindRise"- Praise 
+            p Before I started using Flo MindRise, I was constantly feeling overwhelmed by my responsibilities. I had trouble sleeping, my mind would race, and I couldn't shake the feeling of burnout. The stress was affecting my relationships and my work. But once I discovered the app, everything started to change. The breathing exercises and mindfulness sessions helped me calm my mind and manage my stress. I also found the positive affirmations and mood tracking features really helpful in boosting my confidence and keeping me focused. Flo MindRise has truly helped me regain control of my life, and now I feel more energized and at peace. I encourage anyone who’s feeling stressed or out of balance to give it a try—it’s made a huge difference for me.
+      section#resources.resources
+        h2 Wellness Resources
+        ul
+          li: a(href="/blog/5-tips") 5 Tips to Reduce Stress
+          li: a(href="/blog/journaling-habits") Build a Journaling Habit
+          li: a(href="/events") Upcoming Webinars
+    footer
+      div.social-links
+        a(href="https://facebook.com") Facebook
+        a(href="https://twitter.com") Twitter
+        a(href="https://instagram.com") Instagram
+      p © Flo MindRise. All rights reserved.
+    script(src="/scripts/script.js")
