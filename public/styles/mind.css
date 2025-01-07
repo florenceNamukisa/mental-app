@@ -1,186 +1,210 @@
-/* -----------------------------------------
-   General Styles
------------------------------------------ */
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1000px;
-    margin-top: 50px;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    color: #003366;
-  }
-  
-  h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-  }
-  
-  /* -----------------------------------------
-     Layout Styles
-  ----------------------------------------- */
-  
-  .mood-selection,
-  .video-player,
-  .meditation-timer,
-  .quotes-section,
-  .mood-instructions {
-    margin-top: 30px;
-    text-align: center;
-  }
-  
-  .mood-selection button,
-  .mood-selection button:hover {
-    margin: 10px;
-    padding: 12px 25px;
-    background-color: #008CBA;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .mood-selection button:hover {
-    background-color: #005f73;
-  }
-  
-  .video-player video {
-    width: 100%;
-    max-width: 900px;
-    height: 400px;
-    margin-top: 20px;
-    border-radius: 10px;
-  }
-  
-  /* -----------------------------------------
-     Timer Styles
-  ----------------------------------------- */
-  
-  .meditation-timer .timer-display p {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #5b8c5a;
+}
+
+a:hover {
+  color: #3e6b42;
+}
+
+/* Header */
+header {
+  background-color: #3f6582;
+  padding: 20px 0;
+}
+
+header h1 {
+  color: #fff;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul.nav-links li a {
+  color: white;
+  font-weight: bold;
+}
+
+nav ul.nav-links li a:hover {
+  color: #a9cfec;
+}
+
+/* Main Section */
+main {
+  padding: 30px 15px;
+}
+
+/* Hero Section */
+#hero {
+  background-color: #a9cfec;
+  text-align: center;
+  padding: 50px 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #3f6582;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2f4f68;
+}
+
+/* Music Section */
+#music {
+  background-color: #fff;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.music-player {
+  text-align: center;
+}
+
+.music-player audio {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Videos Section */
+#videos {
+  background-color: #fff;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.video-container iframe {
+  width: 48%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+/* Extra Content Section */
+#extra-content {
+  background-color: #fff;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+ul.extra-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.extra-list li {
+  margin-bottom: 15px;
+}
+
+ul.extra-list li a {
+  color: #3f6582;
+  font-size: 1.1rem;
+}
+
+/* Mood Tracker Section */
+#mood-tracker {
+  background-color: #fff;
+  padding: 30px 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+#mood-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #3f6582;
+  color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #hero h2 {
     font-size: 2rem;
-    color: #00796b;
   }
-  
-  .progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #e0f7fa;
-    margin-top: 15px;
-    border-radius: 5px;
-  }
-  
-  .progress-bar div {
-    height: 100%;
-    background-color: #00796b;
-    width: 0%;
-  }
-  
-  /* -----------------------------------------
-     Button and Interactivity Styles
-  ----------------------------------------- */
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
+
+  #hero p {
     font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 10px;
   }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  /* -----------------------------------------
-     Quotes and Instructions Section Styles
-  ----------------------------------------- */
-  
-  .quotes-section p {
-    font-size: 1.5rem;
-    color: #004d40;
-  }
-  
-  .mood-instructions {
-    font-size: 1.2rem;
-    color: #333;
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  /* -----------------------------------------
-     Footer Styles
-  ----------------------------------------- */
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #004e6e;
-    color: white;
+
+  .video-container iframe {
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    margin-bottom: 10px;
   }
-  
-  footer p {
-    font-size: 1rem;
-    margin: 0;
+}
+
+@media (max-width: 480px) {
+  nav ul.nav-links li {
+    display: block;
+    margin: 10px 0;
   }
-  
-  footer a {
-    color: #80deea;
-    text-decoration: none;
+
+  .video-container iframe {
+    width: 100%;
   }
-  
-  footer a:hover {
-    text-decoration: underline;
+
+  .music-player audio {
+    max-width: 100%;
   }
-  
-  /* -----------------------------------------
-     Media Queries for Responsiveness
-  ----------------------------------------- */
-  
-  @media (max-width: 768px) {
-    .container {
-      padding: 20px;
-    }
-  
-    .video-player video {
-      height: 300px;
-    }
-  
-    .mood-selection button {
-      width: 100%;
-      margin: 5px 0;
-    }
-  
-    .timer-display p {
-      font-size: 1.5rem;
-    }
-  
-    .quotes-section p {
-      font-size: 1.3rem;
-    }
-  }
-  
+}

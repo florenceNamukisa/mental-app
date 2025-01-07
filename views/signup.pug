@@ -33,7 +33,9 @@ head
   title Pug
   link(rel="stylesheet" href="/styles/login.css")
   script(type='text/javascript').
-    if (foo) bar(1 + 5)
+    function redirectToLogin() {
+      window.location.href = '/login';
+    }
 
 .login-container
   .profile-image
@@ -41,10 +43,12 @@ head
     input(type='name' placeholder='User Name')
     input(type='email' placeholder='Email')
     input(type='password' placeholder='Password')
-    input(type=' password' placeholder='Confirm Password')
+    input(type='password' placeholder='Confirm Password')
     .remember-me
       input#remember-me(type='checkbox')
       label(for='remember-me') Remember me
     a.forgot-password(href='#') Forgot Password?
     button.login-button(type='submit') SignUp
-  p.signup-cta Already Have An Account? Login 
+  p.signup-cta 
+    | Already Have An Account? 
+    button(type="button" onclick="redirectToLogin()") Login

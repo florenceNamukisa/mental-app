@@ -26,14 +26,16 @@
 //-         button(type="submit") LOGIN
 //-       p.footer-text
 //-         | don't have an account yet? 
-//-         a(href="#") sign up now
+//-         button(type="button" onclick="redirectToAddUser()") Signup
 
 doctype html
 head
   title Pug
   link(rel="stylesheet" href="/styles/login.css")
   script(type='text/javascript').
-    if (foo) bar(1 + 5)
+    function redirectToAddUser() {
+      window.location.href = '/addUser'; // Redirects to the addUser page
+    }
 
 .login-container
   .profile-image
@@ -45,4 +47,6 @@ head
       label(for='remember-me') Remember me
     a.forgot-password(href='#') Forgot Password?
     button.login-button(type='submit') LOGIN
-  p.signup-cta don&apos;t have an account yet? sign up now
+  p.signup-cta 
+    | don&apos;t have an account yet? 
+    button(type="button" onclick="redirectToAddUser()") Signup
